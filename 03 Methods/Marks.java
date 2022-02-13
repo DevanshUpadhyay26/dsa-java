@@ -28,9 +28,6 @@ public class Marks {
         if(Grades>=41){
             return "DD";
         }
-        if(Grades<=40){
-            return "Failed";
-        }
-        return "False";
+        return "Failed";
     }
 }

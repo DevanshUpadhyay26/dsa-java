@@ -4,26 +4,25 @@ import java.util.Scanner;
 
 public class PrimeMethod {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter number: ");
-        int num=sc.nextInt();
-        if(isPrime(num)){
-            System.out.println("Prime it is ");
-        }
-        else {
-            System.out.println("Not an Prime");
-        }
-
+       Scanner sc= new Scanner(System.in);
+       System.out.print("Enter a number" );
+       int num=sc.nextInt();
+        System.out.println("Is your number is prime? "+isPrime(num));
     }
     static boolean isPrime(int num){
-        boolean isPrime=true;
-        for (int i = 2; i <Math.sqrt(num) ; i++) {
-            if(num%i==0){
-                isPrime = false;
-                break;
-            }
+        if(num<=1){
+            return false;
         }
-        return isPrime;
+       int c;
+        c = 2;
+        while(Math.sqrt(c)<=num){
+           if(num%2==0){
+               return false;
+           }
+           c = c + 1;
+       }
+       return Math.sqrt(c)>num;
+
     }
 
 }
